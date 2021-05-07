@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Khula:700);
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@700&display=swap');
 
 body {
   background: black;
@@ -20,7 +20,7 @@ body {
 }
 
 #upper > div {
-  font-family: Khula;
+  font-family: 'Khula', sans-serif;
   font-size:4em;
   height:200px;
 }
@@ -49,10 +49,6 @@ body {
 
 #header {
   margin-top: 0;
-  background: url("https://wallpapercave.com/wp/wp2020767.jpg") no-repeat;
-  background-size: 100%;
-  width: 100vw;
-  height: 100vh;
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -60,4 +56,11 @@ body {
   bottom:0;
   left:0;
   right:0;
+}
+
+body {
+  background: url("https://wallpapercave.com/wp/wp2020767.jpg") no-repeat;
+  background-size: cover;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
 }
