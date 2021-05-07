@@ -1,28 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@700&display=swap');
 
 body {
-  background: black;
   margin: 0 !important;
   padding: 0 !important;
+  background: url("https://wallpapercave.com/wp/wp2020767.jpg") no-repeat;
+  background-size: cover;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
 }
 
-/*#main-title {*/
-/*  color: whitesmoke;*/
-/*  margin-top: 0;*/
-/*  font-family: 'Trebuchet MS', sans-serif;*/
-/*}*/
-#upper {
+#title {
   position: relative;
   border: 0.1rem dotted white;
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
   justify-content: center;
 }
 
-#upper > div {
+#title > div {
   font-family: 'Khula', sans-serif;
-  font-size:4em;
-  height:200px;
+  font-size: min(6vw, 4em);
+  height: 10vh;
 }
 
 #console {
@@ -56,11 +54,4 @@ body {
   bottom:0;
   left:0;
   right:0;
-}
-
-body {
-  background: url("https://wallpapercave.com/wp/wp2020767.jpg") no-repeat;
-  background-size: cover;
-  /*width: 100vw;*/
-  /*height: 100vh;*/
 }
