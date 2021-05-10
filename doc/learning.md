@@ -30,13 +30,17 @@ ul > li -> every single li that is a child of ul
 <p><b> descendant selector </b>:
 for example : li ul -> any li that eventually goes bac kto ul
 
-<p><b>attribute selector</b> select certain elements based on their attributes:
+<p><b>attribute se lector</b> select certain elements based on their attributes:
 h2[class="button"] -> select all h2 that has attribute class with name "button</p>
 ^ might be used as regex for example img[src^="cos"] -> every image that source starts with,
 $ is for ends, * for contains
 
 # size properties
 vh, vw - viewport height, width
+
+check out how pixels are configured in relation to DPI
+
+There are different realtive and absolute values
 
 #### Links learned from:
 https://www.youtube.com/watch?v=pQN-pnXPaVg
