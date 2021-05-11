@@ -38,9 +38,24 @@ $ is for ends, * for contains
 # size properties
 vh, vw - viewport height, width
 
+# values
+There are different realtive and absolute values
+
 check out how pixels are configured in relation to DPI
 
-There are different realtive and absolute values
+# text decoration
+text-decoration - property allows to change the looks of text
+
+text-transform - property used for setting text case
+
+text-align - aligning text to some side
+
+font-weight: how bold font is
+
+font-family - property to set the type of font
+
+There are  fonts: serif, sans-serif and monospace
+
 
 #### Links learned from:
 https://www.youtube.com/watch?v=pQN-pnXPaVg
