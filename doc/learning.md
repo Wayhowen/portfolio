@@ -52,13 +52,18 @@ text-align - aligning text to some side
 
 font-weight: how bold font is
 
-font-family - property to set the type of font
+font-family - property to set the type of font, there may be multiple to fall back to
 
-There are  fonts: serif, sans-serif and monospace
+There are  fonts: serif, sans-serif and monospace. There are a lot of fonts on google fonts.
+
+# box model
+
+Everything is a box, which has content, padding, border and margin, each centered
 
 
 #### Links learned from:
 https://www.youtube.com/watch?v=pQN-pnXPaVg
 https://www.youtube.com/watch?v=PkZNo7MFNFg
 https://www.youtube.com/watch?v=1Rs2ND1ryYc
+
 
