@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import './own.css'
+import HeaderButton from "./components/HeaderButton/HeaderButton";
+import ConsoleText from "./components/ConsoleText/ConsoleText";
 
 function App() {
   return (
@@ -8,15 +10,14 @@ function App() {
       <header>
         <div id="header">
           <div id="title">
-            <div id="console">Jakub Sowa - Software Engineer</div>
-            <div id="console-underscore">_</div>
+            <ConsoleText mainText="Jakub Sowa - Software Engineer"/>
           </div>
           <nav>
             <div id="navigation">
-              <button className="header-button">About me</button>
-              <button className="header-button">Experience</button>
-              <button className="header-button">Projects</button>
-              <button className="header-button">Contact</button>
+              <HeaderButton mainText="About me"/>
+              <HeaderButton mainText="Experience"/>
+              <HeaderButton mainText="Projects"/>
+              <HeaderButton mainText="Contact"/>
             </div>
           </nav>
         </div>
