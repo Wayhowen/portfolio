@@ -7,7 +7,9 @@ interface Props {
 export default class HeaderButton extends React.Component<Props> {
   render() {
     return (
-      <button className="header-button">{this.props.mainText}</button>
+      <>
+        <button className="w-1/2 h-1/2">{this.props.mainText}</button>
+      </>
     );
   }
 }

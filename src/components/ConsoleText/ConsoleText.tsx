@@ -43,10 +43,10 @@ export default class ConsoleText extends React.Component<Props, State> {
 
   render() {
     return (
-      <>
-        <div id="console">{this.state.textToDisplay}</div>
-        <div id="console-underscore" style={{visibility: this.state.underscoreVisible ? 'visible' : 'hidden'}}>_</div>
-      </>
+      <div className={"text-green-600 flex flex-row text-5xl"}>
+        <div>{this.state.textToDisplay}</div>
+        <div style={{visibility: this.state.underscoreVisible ? 'visible' : 'hidden'}}>_</div>
+      </div>
     );
   }
 }

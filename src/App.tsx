@@ -1,34 +1,22 @@
 import React from 'react';
-import './own.css'
 import HeaderButton from "./components/HeaderButton/HeaderButton";
 import ConsoleText from "./components/ConsoleText/ConsoleText";
+import "./index.css"
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <div id="header">
-          <div id="title">
-            <ConsoleText mainText="Jakub Sowa - Software Engineer"/>
-          </div>
-          <nav>
-            <div id="navigation">
-              <HeaderButton mainText="About me"/>
-              <HeaderButton mainText="Experience"/>
-              <HeaderButton mainText="Projects"/>
-              <HeaderButton mainText="Contact"/>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <main>
-        <div className="main">
-          <div id="content"> should be some content</div>
-        </div>
-      </main>
-      <footer>
-        Test footer
-      </footer>
+    <div className="bg-black text-white">
+      <div className="flex flex-col border-2 w-full h-screen m-3">
+        <header className="h-1/2 mx-auto">
+          <ConsoleText mainText="Jakub Sowa - Fullstack Developer"/>
+        </header>
+        <main className="w-1/2 h-1/2 mx-auto">
+          <HeaderButton mainText={"1"}/>
+          <HeaderButton mainText={"2"}/>
+          <HeaderButton mainText={"3"}/>
+          <HeaderButton mainText={"4"}/>
+        </main>
+      </div>
     </div>
   );
 }
