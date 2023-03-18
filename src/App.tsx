@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import './own.css'
 import HeaderButton from "./components/HeaderButton/HeaderButton";
 import ConsoleText from "./components/ConsoleText/ConsoleText";
