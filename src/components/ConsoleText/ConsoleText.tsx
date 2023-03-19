@@ -41,11 +41,15 @@ export default class ConsoleText extends React.Component<Props, State> {
     }, 100)
   }
 
+  underscore = () => {
+    return this.state.underscoreVisible ? "_" : "\u00A0";
+  }
+
   render() {
     return (
-      <div className={"text-green-600 flex flex-row text-5xl"}>
-        <div>{this.state.textToDisplay}</div>
-        <div style={{visibility: this.state.underscoreVisible ? 'visible' : 'hidden'}}>_</div>
+      <div className={"text-green-600 flex flex-row text-5xl text-center"}>
+        <div>{this.state.textToDisplay.concat(this.underscore())}</div>
+        {/*<div>{this.props.mainText}</div>*/}
       </div>
     );
   }
