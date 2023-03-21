@@ -5,20 +5,20 @@ import "./index.css"
 
 function App() {
   return (
-    <div className="bg-black text-white flex justify-center items-center h-screen">
+    <div className="bg-black text-white flex justify-center items-center min-h-screen">
 
-      <div className="flex-col">
-        <header className="flex-row">
+      <div className="flex flex-col">
+        <header className="flex flex-row p-4 sm:pt-16">
             <ConsoleText mainText="Jakub Sowa - Fullstack Developer"/>
         </header>
-        <main>
+        <main className="space-y-2">
           <div className="flex flex-row justify-center flex-wrap">
-            <HeaderButton mainText={"1"}/>
-            <HeaderButton mainText={"2"}/>
+            <HeaderButton mainText={"1"} customCSS="bg-red-800"/>
+            <HeaderButton mainText={"2"} customCSS="bg-green-800"/>
           </div>
           <div className="flex flex-row justify-center flex-wrap">
-            <HeaderButton mainText={"3"}/>
-            <HeaderButton mainText={"4"}/>
+            <HeaderButton mainText={"3"} customCSS="bg-blue-800"/>
+            <HeaderButton mainText={"4"} customCSS="bg-yellow-400"/>
           </div>
         </main>
       </div>

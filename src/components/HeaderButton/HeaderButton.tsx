@@ -1,16 +1,21 @@
-﻿import React from 'react';
+﻿import * as React from 'react';
 
 interface Props {
   mainText: string;
+  customCSS?: string;
 }
 
-export default class HeaderButton extends React.Component<Props> {
-  render() {
+export default function HeaderButton(props: Props) {
     return (
       <>
-        <button className="w-64 h-64">{this.props.mainText}</button>
+        <button
+          className={`
+          m-4 w-64 h-64
+          rounded-custom
+
+          ${props.customCSS}
+          `}>{props.mainText}</button>
       </>
     );
-  }
 }
 
