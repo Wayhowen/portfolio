@@ -13,11 +13,11 @@ function App() {
         </header>
         <main className="space-y-2">
           <div className="flex flex-row justify-center flex-wrap">
-            <HeaderButton mainText={"1"} customCSS="bg-red-800"/>
-            <HeaderButton mainText={"2"} customCSS="bg-green-800"/>
+            <HeaderButton mainText={"About me"} customCSS="bg-red-800"/>
+            <HeaderButton mainText={"Projects"} customCSS="bg-green-800"/>
           </div>
           <div className="flex flex-row justify-center flex-wrap">
-            <HeaderButton mainText={"3"} customCSS="bg-blue-800"/>
+            <HeaderButton mainText={"Contact me"} customCSS="bg-blue-800"/>
             <HeaderButton mainText={"4"} customCSS="bg-yellow-400"/>
           </div>
         </main>

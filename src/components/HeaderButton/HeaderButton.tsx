@@ -12,7 +12,7 @@ export default function HeaderButton(props: Props) {
           className={`
           m-4 w-64 h-64
           rounded-custom
-
+          text-xl
           ${props.customCSS}
           `}>{props.mainText}</button>
       </>
