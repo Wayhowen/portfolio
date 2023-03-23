@@ -1,9 +1,9 @@
 import React from 'react';
-import HeaderButton from "./components/HeaderButton/HeaderButton";
-import ConsoleText from "./components/ConsoleText/ConsoleText";
-import "./index.css"
+import HeaderButton from "../components/HeaderButton/HeaderButton";
+import ConsoleText from "../components/ConsoleText/ConsoleText";
+import "../index.css"
 
-function App() {
+function Home() {
   return (
     <div className="bg-black text-white flex justify-center items-center min-h-screen">
 
@@ -13,12 +13,12 @@ function App() {
         </header>
         <main className="space-y-2">
           <div className="flex flex-row justify-center flex-wrap">
-            <HeaderButton mainText={"About me"} customCSS="bg-red-800"/>
-            <HeaderButton mainText={"Projects"} customCSS="bg-green-800"/>
+            <HeaderButton mainText={"About me"} to="/me" customCSS="bg-red-800"/>
+            <HeaderButton mainText={"Experience"} to="/experience" customCSS="bg-green-800"/>
           </div>
           <div className="flex flex-row justify-center flex-wrap">
-            <HeaderButton mainText={"Contact me"} customCSS="bg-blue-800"/>
-            <HeaderButton mainText={"4"} customCSS="bg-yellow-400"/>
+            <HeaderButton mainText={"About you"} to="/you" customCSS="bg-blue-800"/>
+            <HeaderButton mainText={"Contact"} to="/contact" customCSS="bg-yellow-500"/>
           </div>
         </main>
       </div>
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
