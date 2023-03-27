@@ -19,7 +19,6 @@ export default function HeaderButton(props: Props) {
           text-2xl
           group hover:scale-95 click:scale-95
           flex items-center justify-center
-          ${props.index % 2 === 0 ? "animate-slideInLeft" : "animate-slideInRight"}
           ${props.customCSS}
           `}>
           {props.mainText}

@@ -27,7 +27,7 @@ export default class ConsoleText extends React.Component<Props, State> {
         ...this.state,
         underscoreVisible: !this.state.underscoreVisible
       })
-    }, 400)
+    }, 800)
   }
 
   setLetters = () => {

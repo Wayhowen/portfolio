@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        slideInLeft: 'slideInLeft 0.7s ease-in',
-        slideInRight: 'slideInRight 0.7s ease-in',
+        homeSlide0: 'slideInLeft 0.4s ease-in',
+        homeSlide1: 'slideInRight 0.5s ease-in',
+        homeSlide2: 'slideInLeft 0.6s ease-in',
+        homeSlide3: 'slideInRight 0.7s ease-in',
       },
       keyframes: {
         slideInLeft: {
