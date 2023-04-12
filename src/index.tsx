@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
 import ErrorPage from "./pages/Error";
+import About from "./pages/About";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,14 +23,22 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />,
+    element: <Home/>,
+    errorElement: <ErrorPage/>,
+  },
+  {
+    path: "/me",
+    element: <About/>,
+    errorElement: <ErrorPage/>,
   },
 ]);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <div className="bg-black text-white flex justify-center items-center min-h-screen">
+      <RouterProvider router={router}/>
+    </div>
+
   </React.StrictMode>
 );
 

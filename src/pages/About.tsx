@@ -3,12 +3,9 @@ import HeaderButton from "../components/HeaderButton/HeaderButton";
 import ConsoleText from "../components/ConsoleText/ConsoleText";
 import "../index.css"
 
-function Home() {
+function About() {
   return (
     <div className="flex flex-col">
-      <header className="flex flex-row p-4 justify-center sm:pt-8">
-        <ConsoleText mainText="Jakub Sowa - Fullstack Developer"/>
-      </header>
       <main className="space-y-2">
         <div className="flex flex-row flex-wrap justify-center items-center max-w-2xl mx-auto">
           <HeaderButton mainText={"About me"} to="/me" customCSS="bg-red-800 animate-homeSlide0" index={0}/>
@@ -21,4 +18,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;
