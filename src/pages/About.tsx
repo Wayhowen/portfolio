@@ -1,17 +1,20 @@
 import React from 'react';
-import HeaderButton from "../components/HeaderButton/HeaderButton";
-import ConsoleText from "../components/ConsoleText/ConsoleText";
 import "../index.css"
+import SmallHeaderButton from "../components/SmallHeaderButton/SmallHeaderButton";
 
 function About() {
   return (
     <div className="flex flex-col">
+      <header className="flex flex-row justify-center items-center max-w-2xl mx-auto">
+        <SmallHeaderButton mainText={"About me"} to="/me" customCSS="bg-red-800" index={0}/>
+        <SmallHeaderButton mainText={"Experience"} to="/experience" customCSS="bg-green-800" index={1}/>
+        <SmallHeaderButton mainText={"About you"} to="/you" customCSS="bg-blue-800" index={2}/>
+        <SmallHeaderButton mainText={"Contact"} to="/contact" customCSS="bg-yellow-500" index={3}/>
+      </header>
       <main className="space-y-2">
         <div className="flex flex-row flex-wrap justify-center items-center max-w-2xl mx-auto">
-          <HeaderButton mainText={"About me"} to="/me" customCSS="bg-red-800 animate-homeSlide0" index={0}/>
-          <HeaderButton mainText={"Experience"} to="/experience" customCSS="bg-green-800 animate-homeSlide1" index={1}/>
-          <HeaderButton mainText={"About you"} to="/you" customCSS="bg-blue-800 animate-homeSlide2" index={2}/>
-          <HeaderButton mainText={"Contact"} to="/contact" customCSS="bg-yellow-500 animate-homeSlide3" index={3}/>
+          <div className="w-96 h-96 bg-white"/>
+
         </div>
       </main>
     </div>
