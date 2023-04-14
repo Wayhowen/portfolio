@@ -11,6 +11,8 @@ module.exports = {
         homeSlide1: 'slideInRight 0.5s ease-in',
         homeSlide2: 'slideInLeft 0.6s ease-in',
         homeSlide3: 'slideInRight 0.7s ease-in',
+        fadeIn: 'fadeIn 0.3s forwards',
+        fadeOut: 'fadeOut 0.3s forwards'
       },
       keyframes: {
         slideInLeft: {
@@ -20,6 +22,14 @@ module.exports = {
         slideInRight: {
           '0%': {transform: 'translateX(200%)'},
           '100%': {transform: 'translateX(0)'},
+        },
+        fadeIn: {
+          '0%': {opacity: '0'},
+          '100%': {transform: 'translate(-20px, 0)'},
+        },
+        fadeOut: {
+          '0%': {opacity: '1'},
+          '100%': {transform: 'translate(0px, 0)'},
         }
       },
       fontFamily: {

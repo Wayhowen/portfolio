@@ -5,7 +5,7 @@ import "../index.css"
 
 function Home() {
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col`}>
       <header className="flex flex-row p-4 justify-center sm:pt-8">
         <ConsoleText mainText="Jakub Sowa - Fullstack Developer"/>
       </header>
