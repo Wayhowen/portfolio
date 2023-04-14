@@ -18,23 +18,27 @@ export default function App() {
   }, [location, displayLocation]);
 
   return (
-    <div className={`bg-black text-white flex justify-center items-center min-h-screen ${transitionStage}`}
-         onAnimationEnd={() => {
-           if (transitionStage === "animate-fadeOut") {
-             setTransistionStage("animate-fadeIn");
-             console.log("transition")
-             setDisplayLocation(location);
-           }
-         }}
-    >
+
+    <>
       {
         location.pathname !== "/" &&
-        <button className="fixed top-0 left-10 text-7xl text-white z-10 hover:scale-95 click:scale-95" onClick={() => navigate(-1)}>&lt;</button>
+        <button className="fixed top-0 left-5 text-7xl z-10 text-white hover:scale-95 click:scale-95"
+                onClick={() => navigate(-1)}>&lt;</button>
       }
-      <Routes location={displayLocation}>
-        <Route path="/" element={<Home/>} errorElement={<ErrorPage/>}/>
-        <Route path="/me" element={<About/>} errorElement={<ErrorPage/>}/>
-      </Routes>
-    </div>
+      <div className={`bg-black text-white flex justify-center items-center min-h-screen ${transitionStage}`}
+           onAnimationEnd={() => {
+             if (transitionStage === "animate-fadeOut") {
+               setTransistionStage("animate-fadeIn");
+               console.log("transition")
+               setDisplayLocation(location);
+             }
+           }}
+      >
+        <Routes location={displayLocation}>
+          <Route path="/" element={<Home/>} errorElement={<ErrorPage/>}/>
+          <Route path="/me" element={<About/>} errorElement={<ErrorPage/>}/>
+        </Routes>
+      </div>
+    </>
   );
 }
