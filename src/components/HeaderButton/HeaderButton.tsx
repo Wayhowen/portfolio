@@ -18,6 +18,7 @@ export default function HeaderButton(props: Props) {
           rounded-custom shadow-inner
           text-2xl
           group hover:scale-95 click:scale-95
+          transition-all duration-300
           flex items-center justify-center
           ${props.customCSS}
           `}>

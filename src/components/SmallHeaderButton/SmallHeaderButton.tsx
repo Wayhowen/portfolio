@@ -15,9 +15,10 @@ export default function SmallHeaderButton(props: Props) {
             className={`
           m-4 w-16 h-16
           flex-grow-0 shrink-0
-          rounded-custom shadow-inner
+          rounded-lg shadow-inner
           text-xl
-          group hover:scale-95 click:scale-95
+          group hover:translate-y-[-3px] hover:scale-95 click:scale-95 click:translate-y-[-3px]
+          transition-all duration-300
           flex items-center justify-center
           ${props.customCSS}
           `}>

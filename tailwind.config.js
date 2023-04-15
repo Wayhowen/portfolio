@@ -7,20 +7,22 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        homeSlide0: 'slideInLeft 0.4s ease-in',
-        homeSlide1: 'slideInRight 0.5s ease-in',
-        homeSlide2: 'slideInLeft 0.6s ease-in',
-        homeSlide3: 'slideInRight 0.7s ease-in',
+        homeSlideL4: 'slideInLeft 0.4s ease-in',
+        homeSlideL5: 'slideInLeft 0.5s ease-in',
+        homeSlideL6: 'slideInLeft 0.6s ease-in',
+        homeSlideL7: 'slideInLeft 0.7s ease-in',
+        homeSlideR5: 'slideInRight 0.5s ease-in',
+        homeSlideR7: 'slideInRight 0.7s ease-in',
         fadeIn: 'fadeIn 0.3s forwards',
         fadeOut: 'fadeOut 0.3s forwards'
       },
       keyframes: {
         slideInLeft: {
-          '0%': {transform: 'translateX(-200%)'},
+          '0%': {transform: 'translateX(-500%)'},
           '100%': {transform: 'translateX(0)'},
         },
         slideInRight: {
-          '0%': {transform: 'translateX(200%)'},
+          '0%': {transform: 'translateX(500%)'},
           '100%': {transform: 'translateX(0)'},
         },
         fadeIn: {
