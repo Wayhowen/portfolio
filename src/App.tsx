@@ -25,7 +25,11 @@ export default function App() {
         <button className="fixed top-0 left-5 text-7xl z-10 text-white hover:scale-95 click:scale-95"
                 onClick={() => navigate(-1)}>&lt;</button>
       }
-      <div className={`bg-black text-white flex justify-center items-center min-h-screen ${transitionStage}`}
+      <div className=
+             {
+        `bg-gradient-to-r from-black to-indigo-800
+        text-white flex justify-center items-center min-h-screen ${transitionStage}`
+      }
            onAnimationEnd={() => {
              if (transitionStage === "animate-fadeOut") {
                setTransistionStage("animate-fadeIn");
