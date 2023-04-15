@@ -47,7 +47,7 @@ export default class ConsoleText extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className={"text-green-500 text-5xl text-center"}>
+      <div className={"text-gray-200 text-5xl text-center"}>
         <div>{this.state.textToDisplay.concat(this.underscore())}</div>
       </div>
     );
