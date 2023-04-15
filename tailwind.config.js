@@ -26,7 +26,7 @@ module.exports = {
           '100%': {transform: 'translateX(0)'},
         },
         fadeIn: {
-          '0%': {opacity: '0'},
+          '0%': {opacity: '0.5'},
           '100%': {transform: 'translate(-20px, 0)'},
         },
         fadeOut: {
