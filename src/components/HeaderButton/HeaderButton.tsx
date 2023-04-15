@@ -15,6 +15,7 @@ export default function HeaderButton(props: Props) {
         className={`
           m-4 w-64 h-64
           flex-grow-0 shrink-0
+          outline
           rounded-custom shadow-inner
           text-2xl
           group hover:scale-95 click:scale-95
