@@ -4,14 +4,15 @@ import {TypeAnimation} from "react-type-animation";
 export default class ConsoleText extends React.Component {
   render() {
     return (
-      <div className={"text-gray-200 text-5xl"}>
+      <div className={"text-gray-200 text-5xl text-center"}>
+        <div>Jakub Sowa</div>
         <TypeAnimation
           sequence={[
-            'Jakub Sowa - Fullstack Developer',
+            'Fullstack Developer',
             5000,
-            'Jakub Sowa - Software Engineer',
+            'Software Engineer',
             5000,
-            'Jakub Sowa - Coder',
+            'Coder',
             5000
           ]}
           wrapper="div"
