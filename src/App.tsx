@@ -15,8 +15,7 @@ export default function App() {
   const [transitionStage, setTransistionStage] = useState("animate-fadeIn");
 
   useEffect(() => {
-    console.log(location)
-    if (location !== displayLocation) setTransistionStage("animate-fadeOut");
+    setDisplayLocation(location)
   }, [location, displayLocation]);
 
   return (
@@ -27,13 +26,7 @@ export default function App() {
         <button className="fixed top-0 left-5 text-7xl z-10 text-white hover:scale-95 click:scale-95"
                 onClick={() => navigate(-1)}>&lt;</button>
       }
-      <div className={`bg-gradient-to-r from-black to-indigo-800 flex flex-row min-h-screen ${transitionStage}`}
-           onAnimationEnd={() => {
-             if (transitionStage === "animate-fadeOut") {
-               setTransistionStage("animate-fadeIn");
-               setDisplayLocation(location);
-             }
-           }}>
+      <div className={`bg-gradient-to-r from-black to-indigo-800 flex flex-row min-h-screen w-full`}>
         <div className=
                {
                  `text-white flex flex-grow justify-center items-center basis-10/12 md:basis-full`
