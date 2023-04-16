@@ -1,54 +1,23 @@
-﻿import React, {useEffect} from 'react';
+﻿import React from 'react';
+import {TypeAnimation} from "react-type-animation";
 
-interface Props {
-  mainText: string;
-}
-
-interface State {
-  textToDisplay: string,
-  underscoreVisible: boolean
-}
-
-export default class ConsoleText extends React.Component<Props, State> {
-
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      textToDisplay: "",
-      underscoreVisible: true
-    }
-  }
-
-  componentDidMount() {
-    this.setLetters();
-
-    setInterval(() => {
-      this.setState({
-        ...this.state,
-        underscoreVisible: !this.state.underscoreVisible
-      })
-    }, 800)
-  }
-
-  setLetters = () => {
-    setTimeout(() => {
-      this.setState({
-        textToDisplay: this.props.mainText.slice(0, this.state.textToDisplay.length + 1),
-      });
-      if (this.state.textToDisplay.length < this.props.mainText.length) {
-        this.setLetters();
-      }
-    }, 100)
-  }
-
-  underscore = () => {
-    return this.state.underscoreVisible ? "_" : "\u00A0";
-  }
-
+export default class ConsoleText extends React.Component {
   render() {
     return (
-      <div className={"text-gray-200 text-5xl text-center"}>
-        <div>{this.state.textToDisplay.concat(this.underscore())}</div>
+      <div className={"text-gray-200 text-5xl"}>
+        <TypeAnimation
+          sequence={[
+            'Jakub Sowa - Fullstack Developer',
+            5000,
+            'Jakub Sowa - Software Engineer',
+            5000,
+            'Jakub Sowa - Coder',
+            5000
+          ]}
+          wrapper="div"
+          cursor={true}
+          repeat={Infinity}
+        />
       </div>
     );
   }
