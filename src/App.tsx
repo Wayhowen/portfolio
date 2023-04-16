@@ -4,6 +4,7 @@ import {useLocation, Routes, Route, useNavigate} from "react-router-dom";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/Error";
 import About from "./pages/About";
+import UnderConstruction from "./pages/UnderConstruction";
 
 export default function App() {
   const location = useLocation();
@@ -41,6 +42,9 @@ export default function App() {
         <Routes location={displayLocation}>
           <Route path="/" element={<Home/>} errorElement={<ErrorPage/>}/>
           <Route path="/me" element={<About/>} errorElement={<ErrorPage/>}/>
+          <Route path="/experience" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
+          <Route path="/you" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
+          <Route path="/contact" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
         </Routes>
       </div>
     </>
