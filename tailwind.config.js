@@ -11,7 +11,9 @@ module.exports = {
         homeSlideL5: 'slideInLeft 0.5s ease-in',
         homeSlideL6: 'slideInLeft 0.6s ease-in',
         homeSlideL7: 'slideInLeft 0.7s ease-in',
+        homeSlideR4: 'slideInRight 0.4s ease-in',
         homeSlideR5: 'slideInRight 0.5s ease-in',
+        homeSlideR6: 'slideInRight 0.6s ease-in',
         homeSlideR7: 'slideInRight 0.7s ease-in',
         fadeIn: 'fadeIn 0.3s forwards',
         fadeOut: 'fadeOut 0.3s forwards'

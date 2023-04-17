@@ -1,11 +1,14 @@
 import * as React from 'react';
 import {Link} from "react-router-dom";
+import {ReactNode} from "react";
+import { IconContext } from "react-icons";
 
 interface Props {
   mainText: string;
   to: string;
   customCSS?: string;
   index: number
+  icon: ReactNode
 }
 
 export default function SmallHeaderButton(props: Props) {
@@ -13,17 +16,20 @@ export default function SmallHeaderButton(props: Props) {
     <>
       <Link to={props.to}
             className={`
-          m-4 w-16 h-16
+          m-4 w-24 h-24
           flex-grow-0 shrink-0
           outline
-          rounded-lg shadow-inner
+          rounded-full shadow-inner
           text-xl
-          group hover:translate-y-[-3px] hover:scale-95 click:scale-95 click:translate-y-[-3px]
+          group hover:translate-y-[-3px] hover:scale-95 click:scale-95
           transition-all duration-300
           flex items-center justify-center
+          bg-indigo-500/25
           ${props.customCSS}
           `}>
-        {props.mainText.split(" ").map(string => string[0].toUpperCase()).join("")}
+        <IconContext.Provider value={{color: "white", className: "global-class-name"}}>
+          {props.icon}
+        </IconContext.Provider>
       </Link>
     </>
   );
