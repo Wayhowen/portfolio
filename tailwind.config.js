@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'c': 'repeat(3, 33%)',
+      },
+      // gridAutoColumns: {
+      //   'ac': 'minmax(0, 2fr)',
+      // },
       animation: {
         homeSlideL4: 'slideInLeft 0.4s ease-in',
         homeSlideL5: 'slideInLeft 0.5s ease-in',

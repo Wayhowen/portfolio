@@ -9,6 +9,7 @@ import SmallHeaderButton from "./components/SmallHeaderButton/SmallHeaderButton"
 import {RxArrowLeft} from "react-icons/rx";
 import {FaThumbsDown, GrContact, GrDocumentText, GrIteration, GrUserManager} from "react-icons/all";
 import ConsoleText from "./components/ConsoleText/ConsoleText";
+import Projects from "./pages/Projects";
 
 export default function App() {
   const location = useLocation();
@@ -38,15 +39,13 @@ export default function App() {
               <ConsoleText />
             </header>
           }
-          <div className="text-white flex flex-grow justify-center items-center">
             <Routes location={displayLocation}>
               <Route path="/" element={<Home/>} errorElement={<ErrorPage/>}/>
-              <Route path="/me" element={<About/>} errorElement={<ErrorPage/>}/>
+              <Route path="/me" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
               <Route path="/experience" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
-              <Route path="/projects" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
+              <Route path="/projects" element={<Projects/>} errorElement={<ErrorPage/>}/>
               <Route path="/contact" element={<UnderConstruction/>} errorElement={<ErrorPage/>}/>
             </Routes>
-          </div>
         </div>
         {location.pathname !== "/" && transitionStage === "animate-fadeIn" &&
           <nav

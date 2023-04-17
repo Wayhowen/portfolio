@@ -1,11 +1,10 @@
 import React from 'react';
 import HeaderButton from "../components/HeaderButton/HeaderButton";
-import ConsoleText from "../components/ConsoleText/ConsoleText";
 import "../index.css"
 
 function Home() {
   return (
-    <div className={`flex flex-col`}>
+    <div className={`flex flex-col grow justify-center items-center text-white`}>
       <main className="space-y-2">
         <div className="flex flex-row flex-wrap justify-center items-center max-w-2xl mx-auto">
           <HeaderButton mainText={"About me"} to="/me" customCSS="outline-red-800 hover:bg-red-800/75 animate-homeSlideL4" index={0}/>
