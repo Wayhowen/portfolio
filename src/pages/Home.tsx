@@ -6,9 +6,6 @@ import "../index.css"
 function Home() {
   return (
     <div className={`flex flex-col`}>
-      <header className="flex flex-row p-4 justify-center sm:pt-8">
-        <ConsoleText/>
-      </header>
       <main className="space-y-2">
         <div className="flex flex-row flex-wrap justify-center items-center max-w-2xl mx-auto">
           <HeaderButton mainText={"About me"} to="/me" customCSS="outline-red-800 hover:bg-red-800/75 animate-homeSlideL4" index={0}/>
