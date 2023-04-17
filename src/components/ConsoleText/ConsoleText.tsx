@@ -1,10 +1,11 @@
 ﻿import React from 'react';
 import {TypeAnimation} from "react-type-animation";
+import {Link} from "react-router-dom";
 
 export default class ConsoleText extends React.Component {
   render() {
     return (
-      <div className={"text-gray-200 text-5xl text-center"}>
+      <Link to={"/"} className={"text-gray-200 text-5xl text-center"} >
         <div>Jakub Sowa</div>
         <TypeAnimation
           sequence={[
@@ -19,7 +20,7 @@ export default class ConsoleText extends React.Component {
           cursor={true}
           repeat={Infinity}
         />
-      </div>
+      </Link>
     );
   }
 }
