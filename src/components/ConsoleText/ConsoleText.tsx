@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 export default class ConsoleText extends React.Component {
   render() {
     return (
-      <Link to={"/"} className={"text-gray-200 text-5xl text-center"} >
+      <Link to={"/"} className={"text-gray-200 text-2xl font-bold md:text-4xl text-center"} >
         <div>Jakub Sowa</div>
         <TypeAnimation
           sequence={[
