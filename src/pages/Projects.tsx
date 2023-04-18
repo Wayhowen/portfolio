@@ -19,15 +19,15 @@ export default function Projects() {
           {/*Desktop view*/}
           <div
             className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll hidden sm:grid">
-            {schoolProjects.map(project => <ProjectEntry project={project}/>)}
+            {schoolProjects.map(project => <ProjectEntry key={project.projectName} project={project}/>)}
           </div>
           <div
             className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll hidden sm:grid">
-            {workProjects.map(project => <ProjectEntry project={project}/>)}
+            {workProjects.map(project => <ProjectEntry key={project.projectName} project={project}/>)}
           </div>
           <div
             className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll hidden sm:grid">
-            {ownProjects.map(project => <ProjectEntry project={project}/>)}
+            {ownProjects.map(project => <ProjectEntry key={project.projectName} project={project}/>)}
           </div>
           {/*Mobile view*/}
           <div
@@ -45,15 +45,13 @@ export default function Projects() {
 
 interface ButtonProps {
   text: string
-  ref?: ForwardedRef<HTMLDivElement>
 }
 
 const ProjectButton = forwardRef<HTMLDivElement, ButtonProps>((props, ref: ForwardedRef<HTMLDivElement>) => {
   const clickHandler = () => {
-    if (ref) {
-      // @ts-ignore
-      ref.current.scrollIntoView()
-    }
+    // TODO: I DONT KNOW HOW TO FIX THIS ERROR but it works so
+    // @ts-ignore
+    ref?.current?.scrollIntoView()
   }
   return (
     <div className="flex justify-center items-center">
