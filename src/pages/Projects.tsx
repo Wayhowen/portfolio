@@ -18,21 +18,22 @@ export default function Projects() {
         <div className="flex flex-row basis-5/6 justify-center sm:justify-self overflow-hidden">
           {/*Desktop view*/}
           <div
-            className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll hidden sm:grid">
+            className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-y-scroll hidden sm:grid">
             {schoolProjects.map(project => <ProjectEntry key={project.projectName} project={project}/>)}
           </div>
           <div
-            className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll hidden sm:grid">
+            className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-y-scroll hidden sm:grid">
             {workProjects.map(project => <ProjectEntry key={project.projectName} project={project}/>)}
           </div>
           <div
-            className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll hidden sm:grid">
+            className="basis-1/3 grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-y-scroll hidden sm:grid">
             {ownProjects.map(project => <ProjectEntry key={project.projectName} project={project}/>)}
           </div>
           {/*Mobile view*/}
           <div
-            className="basis-full grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-scroll grid sm:hidden">
-            {[...schoolProjects, ...workProjects, ...ownProjects].map(project => <ProjectEntry key={project.projectName} project={project} ref={
+            className="basis-full grid-cols-1 grid-rows-r grid-flow-row auto-rows-ar gap-y-4 overflow-y-scroll grid sm:hidden">
+            {[...schoolProjects, ...workProjects, ...ownProjects].map(project => <ProjectEntry key={project.projectName}
+                                                                                               project={project} ref={
               schoolProjects.includes(project) ? schoolRef : workProjects.includes(project) ? workRef : ownRef
             }/>)}
           </div>
@@ -69,9 +70,17 @@ interface ProjectEntryProps {
 
 const ProjectEntry = forwardRef<HTMLDivElement, ProjectEntryProps>((props, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <div ref={props.project.ref ? ref : null} className="flex flex-col border justify-center items-center mx-2">
-      <div className="basis-1/2">{props.project.projectName}</div>
-      <div className="basis-1/2">Thumbnail</div>
+    <div className="flex flex-col justify-center items-center">
+      <div ref={props.project.ref ? ref : null}
+           className="h-full w-5/6 flex flex-col border rounded-custom border-4 justify-center items-center">
+        <div className="basis-1/6 py-3 outline outline-4 rounded-t-custom w-full text-center font-bold bg-gray-400/50">{props.project.projectName}</div>
+        {/*TODO: add thumbnail or something maybe*/}
+        <div className="basis-5/6 w-full flex flex-col justify-end items-center  bg-inherit">
+          <button className="flex flex-column items-center justify-center outline outline-4 p-3 w-full rounded-b-custom">
+            Check out!
+          </button>
+        </div>
+      </div>
     </div>
   );
 })
