@@ -8,7 +8,7 @@ export default function Projects() {
   const workRef: React.RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
   const ownRef: React.RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
 
-  const [displayProject, setDisplayProject] = useState<Project | null>(null)
+  const [displayProject, setDisplayProject] = useState<Project>({projectName: "Project name..", projectDescription: "Project description..", links: []})
 
   return (
     <div className="flex flex-col grow text-white gap-2">
